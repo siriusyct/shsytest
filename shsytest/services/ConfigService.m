@@ -10,22 +10,18 @@
 #import "ConfigService.h"
 #import "SettingService.h"
 #import "MMSystemHelper.h"
-#import "ITSAppConst.h"
 #import "MMLogger.h"
-#import "NewsService.h"
+
 //#import "MMImageView.h"
 //#import "NewsGridItem.h"
-#import "UIImage+MultiFormat.h"
+
 #import <CommonCrypto/CommonDigest.h>
-#import "AppStyleConfiguration.h"
-#import "UIImage+ImageColor.h"
-#import "ITSApplication.h"
+
 
 ConfigService* configInstance = nil;
 
 @implementation ConfigService
 
-@synthesize currentChannel;
 
 
 +(ConfigService*) get{

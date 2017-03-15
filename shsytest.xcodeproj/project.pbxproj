@@ -10,6 +10,8 @@
 		55652B3611A6DC979B733DF4 /* libPods-shsytest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 12ED629EE371D6046E5F8650 /* libPods-shsytest.a */; };
 		672CD8D8E72140AD76C86E58 /* libPods-shsytestUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 93A85D5868A90E092E77D1D1 /* libPods-shsytestUITests.a */; };
 		D64D8C286B61BC86FD21C433 /* libPods-shsytestTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3481AA6A8C3CF2470B9931BB /* libPods-shsytestTests.a */; };
+		FBCCC5DA1E79F095005CD97B /* SSTestItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCCC5D91E79F095005CD97B /* SSTestItem.m */; };
+		FBCCC5DD1E79F0C0005CD97B /* DataService.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCCC5DC1E79F0C0005CD97B /* DataService.m */; };
 		FBDA01621E63883300B9E9E7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FBDA01611E63883300B9E9E7 /* main.m */; };
 		FBDA01651E63883300B9E9E7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FBDA01641E63883300B9E9E7 /* AppDelegate.m */; };
 		FBDA01681E63883300B9E9E7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBDA01671E63883300B9E9E7 /* ViewController.m */; };
@@ -21,8 +23,18 @@
 		FBDA01971E677A7100B9E9E7 /* HomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBDA01961E677A7100B9E9E7 /* HomeController.m */; };
 		FBDA019A1E67843200B9E9E7 /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBDA01991E67843200B9E9E7 /* LoginController.m */; };
 		FBDA019D1E67852E00B9E9E7 /* TestController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBDA019C1E67852E00B9E9E7 /* TestController.m */; };
-		FBDA019F1E6CC67300B9E9E7 /* Momock in Resources */ = {isa = PBXBuildFile; fileRef = FBDA019E1E6CC67300B9E9E7 /* Momock */; };
-		FBDA01A11E6CC6BF00B9E9E7 /* services in Resources */ = {isa = PBXBuildFile; fileRef = FBDA01A01E6CC6BF00B9E9E7 /* services */; };
+		FBDA01B71E70BFBA00B9E9E7 /* MMDictionaryHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FBDA01A61E70BFBA00B9E9E7 /* MMDictionaryHelper.m */; };
+		FBDA01B81E70BFBA00B9E9E7 /* MMDownloadService.m in Sources */ = {isa = PBXBuildFile; fileRef = FBDA01A81E70BFBA00B9E9E7 /* MMDownloadService.m */; };
+		FBDA01B91E70BFBA00B9E9E7 /* MMEventService.m in Sources */ = {isa = PBXBuildFile; fileRef = FBDA01AA1E70BFBA00B9E9E7 /* MMEventService.m */; };
+		FBDA01BA1E70BFBA00B9E9E7 /* MMHttpSession.m in Sources */ = {isa = PBXBuildFile; fileRef = FBDA01AC1E70BFBA00B9E9E7 /* MMHttpSession.m */; };
+		FBDA01BB1E70BFBA00B9E9E7 /* MMImageHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = FBDA01AE1E70BFBA00B9E9E7 /* MMImageHolder.m */; };
+		FBDA01BC1E70BFBA00B9E9E7 /* MMJsonDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = FBDA01B01E70BFBA00B9E9E7 /* MMJsonDatabase.m */; };
+		FBDA01BD1E70BFBA00B9E9E7 /* MMLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = FBDA01B21E70BFBA00B9E9E7 /* MMLogger.m */; };
+		FBDA01BE1E70BFBA00B9E9E7 /* MMSystemHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FBDA01B41E70BFBA00B9E9E7 /* MMSystemHelper.m */; };
+		FBDA01BF1E70BFBA00B9E9E7 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = FBDA01B61E70BFBA00B9E9E7 /* Reachability.m */; };
+		FBDA01C41E70BFCA00B9E9E7 /* ConfigService.m in Sources */ = {isa = PBXBuildFile; fileRef = FBDA01C11E70BFCA00B9E9E7 /* ConfigService.m */; };
+		FBDA01C51E70BFCA00B9E9E7 /* SettingService.m in Sources */ = {isa = PBXBuildFile; fileRef = FBDA01C31E70BFCA00B9E9E7 /* SettingService.m */; };
+		FBDA01C71E70C02800B9E9E7 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FBDA01C61E70C02800B9E9E7 /* libsqlite3.0.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +64,10 @@
 		93A85D5868A90E092E77D1D1 /* libPods-shsytestUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-shsytestUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A435EDAF72F463425767366C /* Pods-shsytestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-shsytestTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-shsytestTests/Pods-shsytestTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B98EA2DF7FCC933D2BDF5303 /* Pods-shsytestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-shsytestUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-shsytestUITests/Pods-shsytestUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		FBCCC5D81E79F086005CD97B /* SSTestItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SSTestItem.h; path = modules/SSTestItem.h; sourceTree = "<group>"; };
+		FBCCC5D91E79F095005CD97B /* SSTestItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SSTestItem.m; path = modules/SSTestItem.m; sourceTree = "<group>"; };
+		FBCCC5DB1E79F0B3005CD97B /* DataService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataService.h; path = services/DataService.h; sourceTree = "<group>"; };
+		FBCCC5DC1E79F0C0005CD97B /* DataService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataService.m; path = services/DataService.m; sourceTree = "<group>"; };
 		FBDA015D1E63883300B9E9E7 /* shsytest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = shsytest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBDA01611E63883300B9E9E7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FBDA01631E63883300B9E9E7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -74,8 +90,30 @@
 		FBDA01991E67843200B9E9E7 /* LoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginController.m; path = controllers/LoginController.m; sourceTree = "<group>"; };
 		FBDA019B1E67851800B9E9E7 /* TestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestController.h; path = controllers/TestController.h; sourceTree = "<group>"; };
 		FBDA019C1E67852E00B9E9E7 /* TestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestController.m; path = controllers/TestController.m; sourceTree = "<group>"; };
-		FBDA019E1E6CC67300B9E9E7 /* Momock */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Momock; sourceTree = "<group>"; };
-		FBDA01A01E6CC6BF00B9E9E7 /* services */ = {isa = PBXFileReference; lastKnownFileType = folder; path = services; sourceTree = "<group>"; };
+		FBDA01A21E70BAD600B9E9E7 /* SHConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHConst.h; sourceTree = "<group>"; };
+		FBDA01A51E70BFBA00B9E9E7 /* MMDictionaryHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MMDictionaryHelper.h; path = Momock/MMDictionaryHelper.h; sourceTree = "<group>"; };
+		FBDA01A61E70BFBA00B9E9E7 /* MMDictionaryHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMDictionaryHelper.m; path = Momock/MMDictionaryHelper.m; sourceTree = "<group>"; };
+		FBDA01A71E70BFBA00B9E9E7 /* MMDownloadService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MMDownloadService.h; path = Momock/MMDownloadService.h; sourceTree = "<group>"; };
+		FBDA01A81E70BFBA00B9E9E7 /* MMDownloadService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMDownloadService.m; path = Momock/MMDownloadService.m; sourceTree = "<group>"; };
+		FBDA01A91E70BFBA00B9E9E7 /* MMEventService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MMEventService.h; path = Momock/MMEventService.h; sourceTree = "<group>"; };
+		FBDA01AA1E70BFBA00B9E9E7 /* MMEventService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMEventService.m; path = Momock/MMEventService.m; sourceTree = "<group>"; };
+		FBDA01AB1E70BFBA00B9E9E7 /* MMHttpSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MMHttpSession.h; path = Momock/MMHttpSession.h; sourceTree = "<group>"; };
+		FBDA01AC1E70BFBA00B9E9E7 /* MMHttpSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMHttpSession.m; path = Momock/MMHttpSession.m; sourceTree = "<group>"; };
+		FBDA01AD1E70BFBA00B9E9E7 /* MMImageHolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MMImageHolder.h; path = Momock/MMImageHolder.h; sourceTree = "<group>"; };
+		FBDA01AE1E70BFBA00B9E9E7 /* MMImageHolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMImageHolder.m; path = Momock/MMImageHolder.m; sourceTree = "<group>"; };
+		FBDA01AF1E70BFBA00B9E9E7 /* MMJsonDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MMJsonDatabase.h; path = Momock/MMJsonDatabase.h; sourceTree = "<group>"; };
+		FBDA01B01E70BFBA00B9E9E7 /* MMJsonDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMJsonDatabase.m; path = Momock/MMJsonDatabase.m; sourceTree = "<group>"; };
+		FBDA01B11E70BFBA00B9E9E7 /* MMLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MMLogger.h; path = Momock/MMLogger.h; sourceTree = "<group>"; };
+		FBDA01B21E70BFBA00B9E9E7 /* MMLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMLogger.m; path = Momock/MMLogger.m; sourceTree = "<group>"; };
+		FBDA01B31E70BFBA00B9E9E7 /* MMSystemHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MMSystemHelper.h; path = Momock/MMSystemHelper.h; sourceTree = "<group>"; };
+		FBDA01B41E70BFBA00B9E9E7 /* MMSystemHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMSystemHelper.m; path = Momock/MMSystemHelper.m; sourceTree = "<group>"; };
+		FBDA01B51E70BFBA00B9E9E7 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = Momock/Reachability.h; sourceTree = "<group>"; };
+		FBDA01B61E70BFBA00B9E9E7 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = Momock/Reachability.m; sourceTree = "<group>"; };
+		FBDA01C01E70BFCA00B9E9E7 /* ConfigService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConfigService.h; path = services/ConfigService.h; sourceTree = "<group>"; };
+		FBDA01C11E70BFCA00B9E9E7 /* ConfigService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ConfigService.m; path = services/ConfigService.m; sourceTree = "<group>"; };
+		FBDA01C21E70BFCA00B9E9E7 /* SettingService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingService.h; path = services/SettingService.h; sourceTree = "<group>"; };
+		FBDA01C31E70BFCA00B9E9E7 /* SettingService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingService.m; path = services/SettingService.m; sourceTree = "<group>"; };
+		FBDA01C61E70C02800B9E9E7 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +121,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBDA01C71E70C02800B9E9E7 /* libsqlite3.0.tbd in Frameworks */,
 				55652B3611A6DC979B733DF4 /* libPods-shsytest.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -122,11 +161,21 @@
 		B9704FD05FBD6D53968C3EE8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FBDA01C61E70C02800B9E9E7 /* libsqlite3.0.tbd */,
 				12ED629EE371D6046E5F8650 /* libPods-shsytest.a */,
 				3481AA6A8C3CF2470B9931BB /* libPods-shsytestTests.a */,
 				93A85D5868A90E092E77D1D1 /* libPods-shsytestUITests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FBCCC5D71E79EFAC005CD97B /* modules */ = {
+			isa = PBXGroup;
+			children = (
+				FBCCC5D81E79F086005CD97B /* SSTestItem.h */,
+				FBCCC5D91E79F095005CD97B /* SSTestItem.m */,
+			);
+			name = modules;
 			sourceTree = "<group>";
 		};
 		FBDA01541E63883300B9E9E7 = {
@@ -154,8 +203,9 @@
 		FBDA015F1E63883300B9E9E7 /* shsytest */ = {
 			isa = PBXGroup;
 			children = (
-				FBDA01A01E6CC6BF00B9E9E7 /* services */,
-				FBDA019E1E6CC67300B9E9E7 /* Momock */,
+				FBCCC5D71E79EFAC005CD97B /* modules */,
+				FBDA01A41E70BFA500B9E9E7 /* Momock */,
+				FBDA01A31E70BF9400B9E9E7 /* services */,
 				FBDA01941E677A4200B9E9E7 /* controllers */,
 				FBDA01631E63883300B9E9E7 /* AppDelegate.h */,
 				FBDA01641E63883300B9E9E7 /* AppDelegate.m */,
@@ -166,6 +216,7 @@
 				FBDA016E1E63883300B9E9E7 /* LaunchScreen.storyboard */,
 				FBDA01711E63883300B9E9E7 /* Info.plist */,
 				FBDA01601E63883300B9E9E7 /* Supporting Files */,
+				FBDA01A21E70BAD600B9E9E7 /* SHConst.h */,
 			);
 			path = shsytest;
 			sourceTree = "<group>";
@@ -207,6 +258,44 @@
 				FBDA019C1E67852E00B9E9E7 /* TestController.m */,
 			);
 			name = controllers;
+			sourceTree = "<group>";
+		};
+		FBDA01A31E70BF9400B9E9E7 /* services */ = {
+			isa = PBXGroup;
+			children = (
+				FBDA01C01E70BFCA00B9E9E7 /* ConfigService.h */,
+				FBDA01C11E70BFCA00B9E9E7 /* ConfigService.m */,
+				FBDA01C21E70BFCA00B9E9E7 /* SettingService.h */,
+				FBDA01C31E70BFCA00B9E9E7 /* SettingService.m */,
+				FBCCC5DB1E79F0B3005CD97B /* DataService.h */,
+				FBCCC5DC1E79F0C0005CD97B /* DataService.m */,
+			);
+			name = services;
+			sourceTree = "<group>";
+		};
+		FBDA01A41E70BFA500B9E9E7 /* Momock */ = {
+			isa = PBXGroup;
+			children = (
+				FBDA01A51E70BFBA00B9E9E7 /* MMDictionaryHelper.h */,
+				FBDA01A61E70BFBA00B9E9E7 /* MMDictionaryHelper.m */,
+				FBDA01A71E70BFBA00B9E9E7 /* MMDownloadService.h */,
+				FBDA01A81E70BFBA00B9E9E7 /* MMDownloadService.m */,
+				FBDA01A91E70BFBA00B9E9E7 /* MMEventService.h */,
+				FBDA01AA1E70BFBA00B9E9E7 /* MMEventService.m */,
+				FBDA01AB1E70BFBA00B9E9E7 /* MMHttpSession.h */,
+				FBDA01AC1E70BFBA00B9E9E7 /* MMHttpSession.m */,
+				FBDA01AD1E70BFBA00B9E9E7 /* MMImageHolder.h */,
+				FBDA01AE1E70BFBA00B9E9E7 /* MMImageHolder.m */,
+				FBDA01AF1E70BFBA00B9E9E7 /* MMJsonDatabase.h */,
+				FBDA01B01E70BFBA00B9E9E7 /* MMJsonDatabase.m */,
+				FBDA01B11E70BFBA00B9E9E7 /* MMLogger.h */,
+				FBDA01B21E70BFBA00B9E9E7 /* MMLogger.m */,
+				FBDA01B31E70BFBA00B9E9E7 /* MMSystemHelper.h */,
+				FBDA01B41E70BFBA00B9E9E7 /* MMSystemHelper.m */,
+				FBDA01B51E70BFBA00B9E9E7 /* Reachability.h */,
+				FBDA01B61E70BFBA00B9E9E7 /* Reachability.m */,
+			);
+			name = Momock;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -325,11 +414,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FBDA019F1E6CC67300B9E9E7 /* Momock in Resources */,
 				FBDA01701E63883300B9E9E7 /* LaunchScreen.storyboard in Resources */,
 				FBDA016D1E63883300B9E9E7 /* Assets.xcassets in Resources */,
 				FBDA016B1E63883300B9E9E7 /* Main.storyboard in Resources */,
-				FBDA01A11E6CC6BF00B9E9E7 /* services in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,12 +579,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBDA01BE1E70BFBA00B9E9E7 /* MMSystemHelper.m in Sources */,
+				FBDA01C51E70BFCA00B9E9E7 /* SettingService.m in Sources */,
+				FBDA01C41E70BFCA00B9E9E7 /* ConfigService.m in Sources */,
+				FBDA01B91E70BFBA00B9E9E7 /* MMEventService.m in Sources */,
 				FBDA019A1E67843200B9E9E7 /* LoginController.m in Sources */,
+				FBDA01B81E70BFBA00B9E9E7 /* MMDownloadService.m in Sources */,
+				FBCCC5DA1E79F095005CD97B /* SSTestItem.m in Sources */,
+				FBDA01BF1E70BFBA00B9E9E7 /* Reachability.m in Sources */,
 				FBDA019D1E67852E00B9E9E7 /* TestController.m in Sources */,
+				FBDA01BC1E70BFBA00B9E9E7 /* MMJsonDatabase.m in Sources */,
+				FBCCC5DD1E79F0C0005CD97B /* DataService.m in Sources */,
+				FBDA01BD1E70BFBA00B9E9E7 /* MMLogger.m in Sources */,
 				FBDA01971E677A7100B9E9E7 /* HomeController.m in Sources */,
 				FBDA01681E63883300B9E9E7 /* ViewController.m in Sources */,
 				FBDA01651E63883300B9E9E7 /* AppDelegate.m in Sources */,
+				FBDA01B71E70BFBA00B9E9E7 /* MMDictionaryHelper.m in Sources */,
+				FBDA01BA1E70BFBA00B9E9E7 /* MMHttpSession.m in Sources */,
 				FBDA01621E63883300B9E9E7 /* main.m in Sources */,
+				FBDA01BB1E70BFBA00B9E9E7 /* MMImageHolder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -646,13 +746,19 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1C215DF7E5F00396EF5F705D /* Pods-shsytest.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7UJ8R47E36;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+				);
 				INFOPLIST_FILE = shsytest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yct.shsytest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"$(PROJECT_DIR)/controllers\" \"$(PROJECT_DIR)/Momock\" \"$(PROJECT_DIR)/services\"";
 			};
 			name = Debug;
 		};
@@ -660,13 +766,19 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 651D5587D4742C70BA974F5E /* Pods-shsytest.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7UJ8R47E36;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+				);
 				INFOPLIST_FILE = shsytest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yct.shsytest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"$(PROJECT_DIR)/controllers\" \"$(PROJECT_DIR)/Momock\" \"$(PROJECT_DIR)/services\"";
 			};
 			name = Release;
 		};

@@ -13,6 +13,10 @@
 
 @interface LoginController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITextField *tfName;
+
+- (IBAction)saveNameAction:(id)sender;
+
 
 @end
 

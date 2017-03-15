@@ -8,6 +8,11 @@
 
 #import "ViewController.h"
 #import "AppDelegate.h"
+#import "SettingService.h"
+#import "HomeController.h"
+#import "SHConst.h"
+#import "LoginController.h"
+#import "HomeController.h"
 
 @interface ViewController ()
 
@@ -19,15 +24,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    [[UIApplication sharedApplication] setStatusBarOrientation:UIInterfaceOrientationLandscapeLeft animated:NO];
-    self.view.bounds = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
-    self.view.transform = CGAffineTransformMakeRotation(M_PI*0.5);
-    
+
     //AppDelegate * appDelegate = (AppDelegate*)[UIApplication sharedApplication].delegate;
     
     //appDelegate.allowRotation = YES;//(以上2行代码,可以理解为打开横屏开关)
     
     //[self setNewOrientation:YES];//调用转屏代码
+    //[self performSegueWithIdentifier:@"loginView" sender:self];
 }
 
 
@@ -38,6 +41,27 @@
 
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
+    
+    SettingService* ss = [SettingService get];
+    NSDictionary* info = [ss getDictoryValue:SS_USER_INFO defValue:nil];
+    if (info == nil){
+        dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC));
+        dispatch_after(popTime, dispatch_get_main_queue(), ^{
+            
+            UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+            LoginController* lgView = [story instantiateViewControllerWithIdentifier:@"loginView"];
+            [self.navigationController pushViewController:lgView animated:NO];
+        });
+    } else {
+        dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC));
+        dispatch_after(popTime, dispatch_get_main_queue(), ^{
+            UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+            HomeController* homeView = [story instantiateViewControllerWithIdentifier:@"homeView"];
+            [self.navigationController pushViewController:homeView animated:NO];
+        });
+    }
+    
+    
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {

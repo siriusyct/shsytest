@@ -13,7 +13,7 @@
 #import <netdb.h>
 #import <arpa/inet.h>
 #import "MMSystemHelper.h"
-#import "ITSApplication.h"
+
 
 static NetWorkType currentNetType = NoNet;
 

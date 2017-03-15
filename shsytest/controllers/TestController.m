@@ -15,9 +15,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    [[UIApplication sharedApplication] setStatusBarOrientation:UIInterfaceOrientationLandscapeLeft animated:NO];
-    self.view.bounds = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
-    self.view.transform = CGAffineTransformMakeRotation(M_PI*0.5);
+    
 }
 
 

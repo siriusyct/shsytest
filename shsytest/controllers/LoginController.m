@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "LoginController.h"
+#import "HomeController.h"
+#import "SettingService.h"
+#import "SHConst.h"
 
 @implementation LoginController
 
@@ -15,9 +18,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    [[UIApplication sharedApplication] setStatusBarOrientation:UIInterfaceOrientationLandscapeLeft animated:NO];
-    self.view.bounds = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
-    self.view.transform = CGAffineTransformMakeRotation(M_PI*0.5);
+
 }
 
 
@@ -30,4 +31,18 @@
     [super viewDidAppear:animated];
 }
 
+- (IBAction)saveNameAction:(id)sender {
+    NSString* name = _tfName.text;
+    if (name == nil)
+        return;
+    
+    if (name.length > 1){
+        SettingService* ss = [SettingService get];
+        [ss setStringValue:SS_USER_INFO data:name];
+        
+        UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+        HomeController* homeView = [story instantiateViewControllerWithIdentifier:@"homeView"];
+        [self.navigationController pushViewController:homeView animated:NO];
+    }
+}
 @end
